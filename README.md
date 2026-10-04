@@ -64,3 +64,33 @@ metric and decision threshold depend on what the business actually pays for
 mistakes, not a statistical default like 0.5.
 
 Notebook: [week-2-building-ml-models.ipynb](week-2-building-ml-models.ipynb)
+
+
+## Week 3: Model Optimization and Unsupervised Learning
+
+- Split-to-split accuracy range across 20 seeds: 0.780 to 0.828
+- 5-fold CV AUC:
+  - Logistic Regression: 0.8464 ± 0.0129
+  - Random Forest: 0.8464 ± 0.0114
+  - XGBoost: 0.8504 ± 0.0125
+- Best Random Forest parameters from Random Search:
+  - `max_depth = 15`
+  - `max_features = 0.21`
+  - `min_samples_leaf = 15`
+- Grid Search vs Random Search:
+  - Grid Search: 113 seconds
+  - Random Search: 122 seconds
+  - Both used 120 fits
+- Final XGBoost test AUC: 0.8478
+- Customer segments (`k = 4`):
+  - Mid-tenure, high bill — 43% churn
+  - New, low spend — 32% churn
+  - Loyal premium — 14% churn
+  - Loyal basics — 5% churn
+- PCA: 15 of 30 components explain 90% of the variance
+
+### Key Lesson
+
+Tuning gave only a small gain (+0.006 AUC over my Week 2 Random Forest). The main lesson was that an honest cross-validated estimate mattered more than chasing one more point.
+
+Notebook: [View Week 3 Notebook](week3-optimization.ipynb)
