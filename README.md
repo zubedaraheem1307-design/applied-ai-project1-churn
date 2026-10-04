@@ -63,7 +63,7 @@ Accuracy alone can hide a completely useless model — the "right" evaluation
 metric and decision threshold depend on what the business actually pays for 
 mistakes, not a statistical default like 0.5.
 
-Notebook: [week-2-building-ml-models.ipynb]week2-ml-models.ipynb
+Notebook: week2-ml-models.ipynb
 
 
 ## Week 3: Model Optimization and Unsupervised Learning
